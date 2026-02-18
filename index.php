@@ -65,6 +65,11 @@
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 
+    @media (max-width: 991px) {
+      .container { padding: 0 24px; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 40px; }
+    }
+
     /* ─── Buttons ─── */
     .btn {
       display: inline-flex;
@@ -188,6 +193,50 @@
     .nav-links a:hover { color: var(--white); }
     .nav-cta { display: flex; align-items: center; gap: 12px; }
 
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 5px;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: var(--white);
+      transition: 0.3s;
+    }
+
+    .mobile-only { display: none; }
+
+    @media (max-width: 991px) {
+      nav { padding: 0 20px; }
+      .menu-toggle { display: flex; z-index: 1001; }
+      .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
+        background: var(--navy);
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        transition: 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+        padding-left: 0;
+      }
+      .nav-links.active { right: 0; }
+      .nav-links a { font-size: 1.2rem; }
+      .nav-cta { display: none; }
+      .mobile-only { display: block; }
+
+      .menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .menu-toggle.active span:nth-child(2) { opacity: 0; }
+      .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+
     /* ────────────────────────────────────────
        HERO
     ──────────────────────────────────────── */
@@ -230,6 +279,18 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
+    }
+    @media (max-width: 991px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+        text-align: center;
+      }
+      .hero-desc { margin: 0 auto 40px; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; gap: 20px; flex-wrap: wrap; }
     }
     .hero-left { }
     .hero-tag {
@@ -310,6 +371,12 @@
       align-items: center;
       justify-content: center;
       height: 520px;
+    }
+    @media (max-width: 991px) {
+      .hero-visual { height: 400px; }
+      .avo-scene { transform: scale(0.8); }
+      .hero-badge-1 { left: 0; }
+      .hero-badge-2 { right: 0; }
     }
     .avo-scene {
       position: relative;
@@ -453,6 +520,9 @@
        SECTION COMMONS
     ──────────────────────────────────────── */
     section { padding: 100px 0; }
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+    }
     .section-label {
       font-size: 0.7rem;
       letter-spacing: 0.22em;
@@ -477,6 +547,9 @@
       max-width: 540px;
     }
     .section-header { margin-bottom: 64px; }
+    @media (max-width: 768px) {
+      .section-header { margin-bottom: 40px; }
+    }
     .section-header.centered { text-align: center; }
     .section-header.centered .section-subtitle { margin: 0 auto; }
 
@@ -546,6 +619,18 @@
       padding: 20px 24px;
       box-shadow: var(--shadow-lg);
       min-width: 200px;
+    }
+    @media (max-width: 768px) {
+      .about-floating-card {
+        right: 0;
+        bottom: 0;
+        min-width: auto;
+        padding: 12px 16px;
+      }
+      .about-top-card {
+        left: 0;
+        top: 0;
+      }
     }
     .afc-number {
       font-family: 'Playfair Display', serif;
@@ -712,6 +797,16 @@
       gap: 20px;
       position: relative;
     }
+    @media (max-width: 991px) {
+      .why-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 580px) {
+      .why-cards {
+        grid-template-columns: 1fr;
+      }
+    }
     .why-card {
       padding: 32px 24px;
       border-radius: var(--radius-lg);
@@ -773,11 +868,37 @@
       background: linear-gradient(90deg, var(--navy), var(--accent));
       z-index: 0;
     }
+    @media (max-width: 991px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .process-steps::before {
+        top: 0;
+        bottom: 0;
+        left: 36px;
+        width: 2px;
+        height: auto;
+        background: linear-gradient(180deg, var(--navy), var(--accent));
+      }
+    }
     .process-step {
       text-align: center;
       padding: 0 16px;
       position: relative;
       z-index: 1;
+    }
+    @media (max-width: 991px) {
+      .process-step {
+        text-align: left;
+        padding-left: 100px;
+      }
+      .process-step-circle {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     }
     .process-step-circle {
       width: 72px; height: 72px;
@@ -822,6 +943,12 @@
       grid-template-columns: 1fr 1.2fr;
       gap: 80px;
       align-items: start;
+    }
+    @media (max-width: 991px) {
+      .markets-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
     }
     .market-list { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
     .market-item {
@@ -925,6 +1052,11 @@
       gap: 60px;
       flex-wrap: wrap;
     }
+    @media (max-width: 768px) {
+      .cert-track {
+        gap: 30px;
+      }
+    }
     .cert-item {
       display: flex;
       align-items: center;
@@ -956,6 +1088,11 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+    }
+    @media (max-width: 991px) {
+      .testimonial-cards {
+        grid-template-columns: 1fr;
+      }
     }
     .testimonial-card {
       padding: 32px;
@@ -1049,6 +1186,15 @@
       gap: 80px;
       align-items: start;
     }
+    @media (max-width: 991px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+      .contact-form {
+        padding: 30px 20px;
+      }
+    }
     .contact-info { }
     .contact-detail {
       display: flex;
@@ -1075,6 +1221,11 @@
       box-shadow: var(--shadow);
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 580px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
     .form-group { margin-bottom: 20px; }
     .form-group label {
       display: block;
@@ -1127,6 +1278,17 @@
       padding-bottom: 60px;
       border-bottom: 1px solid rgba(255,255,255,0.08);
       margin-bottom: 32px;
+    }
+    @media (max-width: 991px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+    }
+    @media (max-width: 580px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
     .footer-brand { }
     .footer-logo {
@@ -1185,6 +1347,13 @@
       font-size: 0.78rem;
       color: rgba(255,255,255,0.3);
     }
+    @media (max-width: 768px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
     .footer-bottom a { color: rgba(255,255,255,0.3); text-decoration: none; }
     .footer-bottom a:hover { color: var(--accent); }
     .footer-bottom-links { display: flex; gap: 24px; }
@@ -1234,10 +1403,16 @@
       <li><a href="#markets">Markets</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li class="mobile-only"><a href="#contact" class="btn btn-primary" style="color:white; margin-top: 20px;">Request a Quote</a></li>
     </ul>
     <div class="nav-cta">
       <a href="#contact" class="btn btn-primary" style="padding:10px 22px;font-size:0.8rem;">Request a Quote</a>
     </div>
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
   <!-- ╔═ HERO ═╗ -->
@@ -1870,6 +2045,23 @@
       });
     }, { threshold: 0.12 });
     reveals.forEach(el => io.observe(el));
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
 
     // Market item interactivity
     document.querySelectorAll('.market-item').forEach(item => {
