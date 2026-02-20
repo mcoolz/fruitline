@@ -24,8 +24,8 @@
               <span class="product-spec">Apr – Aug</span>
             </div>
             <div class="product-cta">
-              <a href="/contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="/contact" class="product-cta-link">Spec Sheet <span>→</span></a>
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
             </div>
           </div>
         </div>
@@ -44,8 +44,8 @@
               <span class="product-spec">May – Sep</span>
             </div>
             <div class="product-cta">
-              <a href="/contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="/contact" class="product-cta-link">Spec Sheet <span>→</span></a>
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
             </div>
           </div>
         </div>
@@ -65,8 +65,8 @@
               <span class="product-spec">Nov – Mar</span>
             </div>
             <div class="product-cta">
-              <a href="/contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="/contact" class="product-cta-link">Spec Sheet <span>→</span></a>
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
             </div>
           </div>
         </div>
@@ -86,8 +86,8 @@
               <span class="product-spec">Year Round</span>
             </div>
             <div class="product-cta">
-              <a href="/contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="/contact" class="product-cta-link">Spec Sheet <span>→</span></a>
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
             </div>
           </div>
         </div>
@@ -107,8 +107,8 @@
               <span class="product-spec">Year Round</span>
             </div>
             <div class="product-cta">
-              <a href="/contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="/contact" class="product-cta-link">Spec Sheet <span>→</span></a>
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
             </div>
           </div>
         </div>
@@ -128,8 +128,8 @@
               <span class="product-spec">Daily Supply</span>
             </div>
             <div class="product-cta">
-              <a href="/contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="/contact" class="product-cta-link">Spec Sheet <span>→</span></a>
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
             </div>
           </div>
         </div>
@@ -148,8 +148,8 @@
               <span class="product-spec">Limited Vol.</span>
             </div>
             <div class="product-cta">
-              <a href="/contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Inquire</a>
-              <a href="/contact" class="product-cta-link">Spec Sheet <span>→</span></a>
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Inquire</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
             </div>
           </div>
         </div>

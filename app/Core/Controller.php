@@ -6,9 +6,16 @@ class Controller {
     protected function render($view, $data = []) {
         extract($data);
 
+        $basePath = dirname($_SERVER['SCRIPT_NAME']);
+        $baseUrl = ($basePath === '/' || $basePath === '\\') ? '' : $basePath;
+
         // Define helpers
-        $asset = function($path) {
-            return '/assets/' . ltrim($path, '/');
+        $asset = function($path) use ($baseUrl) {
+            return $baseUrl . '/assets/' . ltrim($path, '/');
+        };
+
+        $url = function($path) use ($baseUrl) {
+            return $baseUrl . '/' . ltrim($path, '/');
         };
 
         ob_start();

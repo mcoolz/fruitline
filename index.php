@@ -2,7 +2,7 @@
 
 spl_autoload_register(function ($class) {
     $prefix = 'App\\';
-    $base_dir = __DIR__ . '/../app/';
+    $base_dir = __DIR__ . '/app/';
 
     $len = strlen($prefix);
     if (strncmp($prefix, $class, $len) !== 0) {
@@ -20,7 +20,7 @@ spl_autoload_register(function ($class) {
 // Route static files for built-in PHP server
 if (php_sapi_name() === 'cli-server') {
     $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    if (file_exists(__DIR__ . $path) && is_file(__DIR__ . $path)) {
+    if ($path !== '/' && file_exists(__DIR__ . $path) && is_file(__DIR__ . $path)) {
         return false;
     }
 }

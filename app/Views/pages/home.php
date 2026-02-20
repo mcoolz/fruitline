@@ -16,8 +16,8 @@
           delivering premium Avocados, Mangoes, Coconuts, and Fresh Produce with unmatched quality and care.
         </p>
         <div class="hero-actions">
-          <a href="/contact" class="btn btn-primary">Request a Quote →</a>
-          <a href="/products" class="btn btn-outline">Explore Products</a>
+          <a href="<?= $url('contact') ?>" class="btn btn-primary">Request a Quote →</a>
+          <a href="<?= $url('products') ?>" class="btn btn-outline">Explore Products</a>
         </div>
         <div class="hero-stats">
           <div>
@@ -91,7 +91,7 @@
           <p style="color:var(--text-light); line-height:1.8; margin-bottom:24px;">
             Founded in Dar es Salaam, Fruitline Trading was built on a simple promise: to share Tanzania's exceptional agricultural bounty with the world — without compromising on quality, ethics, or relationships.
           </p>
-          <a href="/about" class="btn btn-navy">Learn More About Us</a>
+          <a href="<?= $url('about') ?>" class="btn btn-navy">Learn More About Us</a>
         </div>
       </div>
     </div>
@@ -143,7 +143,7 @@
         </div>
       </div>
       <div style="text-align:center; margin-top:60px;" class="reveal">
-        <a href="/products" class="btn btn-primary">View Full Catalogue</a>
+        <a href="<?= $url('products') ?>" class="btn btn-primary">View Full Catalogue</a>
       </div>
     </div>
   </section>
@@ -153,6 +153,6 @@
     <div class="container">
       <h2>Ready to Source<br/>Tanzanian Produce?</h2>
       <p>Join 40+ buyers who trust Fruitline Trading for consistent quality and reliable supply.</p>
-      <a href="/contact" class="btn btn-navy">Get Started — Request a Quote</a>
+      <a href="<?= $url('contact') ?>" class="btn btn-navy">Get Started — Request a Quote</a>
     </div>
   </div>

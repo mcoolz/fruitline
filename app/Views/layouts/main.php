@@ -11,7 +11,7 @@
 
   <!-- ╔═ NAVBAR ═╗ -->
   <nav>
-    <a href="/" class="nav-logo">
+    <a href="<?= $url('/') ?>" class="nav-logo">
       <div class="nav-logo-icon">🍃</div>
       <div class="nav-logo-text">
         <span class="nav-logo-name">Fruitline Trading</span>
@@ -19,16 +19,16 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="/about">About</a></li>
-      <li><a href="/products">Products</a></li>
-      <li><a href="/markets">Markets</a></li>
-      <li><a href="/gallery">Gallery</a></li>
-      <li><a href="/process">Process</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li class="mobile-only"><a href="/contact" class="btn btn-primary" style="color:white; margin-top: 20px;">Request a Quote</a></li>
+      <li><a href="<?= $url('about') ?>">About</a></li>
+      <li><a href="<?= $url('products') ?>">Products</a></li>
+      <li><a href="<?= $url('markets') ?>">Markets</a></li>
+      <li><a href="<?= $url('gallery') ?>">Gallery</a></li>
+      <li><a href="<?= $url('process') ?>">Process</a></li>
+      <li><a href="<?= $url('contact') ?>">Contact</a></li>
+      <li class="mobile-only"><a href="<?= $url('contact') ?>" class="btn btn-primary" style="color:white; margin-top: 20px;">Request a Quote</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="/contact" class="btn btn-primary" style="padding:10px 22px;font-size:0.8rem;">Request a Quote</a>
+      <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 22px;font-size:0.8rem;">Request a Quote</a>
     </div>
     <button class="menu-toggle" aria-label="Toggle Menu">
       <span></span>
@@ -60,9 +60,9 @@
         <div class="footer-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="/products">Premium Avocados</a></li>
-            <li><a href="/products">Mangoes & Pineapples</a></li>
-            <li><a href="/products">Vegetables & Herbs</a></li>
+            <li><a href="<?= $url('products') ?>">Premium Avocados</a></li>
+            <li><a href="<?= $url('products') ?>">Mangoes & Pineapples</a></li>
+            <li><a href="<?= $url('products') ?>">Vegetables & Herbs</a></li>
             <li><a href="#">Custom Packaging</a></li>
             <li><a href="#">Product Catalogue</a></li>
           </ul>
@@ -70,7 +70,7 @@
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="/about">About Us</a></li>
+            <li><a href="<?= $url('about') ?>">About Us</a></li>
             <li><a href="#">Our Farms</a></li>
             <li><a href="#">Certifications</a></li>
             <li><a href="#">Sustainability</a></li>
@@ -80,17 +80,17 @@
         <div class="footer-col">
           <h5>Trade Info</h5>
           <ul>
-            <li><a href="/markets">Export Markets</a></li>
+            <li><a href="<?= $url('markets') ?>">Export Markets</a></li>
             <li><a href="#">Incoterms & Pricing</a></li>
             <li><a href="#">Logistics Partners</a></li>
             <li><a href="#">Quality Standards</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="<?= $url('contact') ?>">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Sister Company</h5>
           <ul>
-            <li><a href="https://primeroductinternational.co.ke" target="_blank" rel="noopener">Prime Products International Ltd (Kenya)</a></li>
+            <li><a href="https://primeproductinternational.co.ke" target="_blank" rel="noopener">Prime Products International Ltd (Kenya)</a></li>
           </ul>
         </div>
       </div>
