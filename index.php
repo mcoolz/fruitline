@@ -8,8 +8,9 @@
   <style>
     /* ─── Design Tokens (60-30-10) ─── */
     :root {
-      /* 60% Neutral */
+      /* Base & Neutral */
       --white:       #FAFAF7;
+      --soft-green:  #ECF2E8; /* 15% Target color */
       --light-gray:  #F0EEE9;
       --mid-gray:    #D8D5CE;
       --text-light:  #888480;
@@ -19,6 +20,11 @@
       --navy-80:     rgba(15,33,67,0.8);
       --navy-10:     rgba(15,33,67,0.08);
 
+      /* 10% Secondary — Avocado Green */
+      --green:       #558B2F;
+      --green-dark:  #33691E;
+      --green-10:    rgba(85,139,47,0.12);
+
       /* 10% Accent — Safety Orange */
       --accent:      #FF8C00;
       --accent-dark: #D97400;
@@ -27,15 +33,16 @@
       /* Utility */
       --text-dark:   #1A1612;
       --text-body:   #3D3A35;
-      --radius:      4px;
-      --radius-lg:   12px;
-      --shadow:      0 2px 24px rgba(15,33,67,0.10);
-      --shadow-lg:   0 8px 48px rgba(15,33,67,0.16);
+      --radius:      6px;
+      --radius-lg:   20px;
+      --shadow:      0 4px 30px rgba(15,33,67,0.08);
+      --shadow-lg:   0 20px 60px rgba(15,33,67,0.12);
+      --glass:       rgba(255,255,255,0.7);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
     body {
       font-family: 'DM Sans', sans-serif;
@@ -93,8 +100,8 @@
     }
     .btn-primary:hover {
       background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(255,140,0,0.35);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(255,140,0,0.4);
     }
     .btn-outline {
       background: transparent;
@@ -127,6 +134,48 @@
     }
     .tag-accent { background: var(--accent-10); color: var(--accent-dark); }
     .tag-navy  { background: var(--navy-10); color: var(--navy); }
+    .tag-green { background: var(--green-10); color: var(--green); }
+
+    .blob {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--green-10) 0%, var(--accent-10) 50%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(100px);
+      opacity: 0.6;
+      animation: blobFloat 20s ease-in-out infinite alternate;
+    }
+    @keyframes blobFloat {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px, -60px) scale(1.1); }
+    }
+
+    .bg-grain {
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+      z-index: 1;
+    }
+
+    .section-divider {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .divider-top { top: -1px; transform: rotate(180deg); }
+    .divider-bottom { bottom: -1px; }
+    .divider-soft-green { fill: var(--soft-green); }
+    .divider-white { fill: var(--white); }
+    .divider-navy { fill: var(--navy); }
 
     /* ────────────────────────────────────────
        NAVBAR
@@ -134,15 +183,17 @@
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 100;
+      z-index: 1000;
       padding: 0 32px;
-      background: rgba(15,33,67,0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.07);
+      background: rgba(15,33,67,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 80px;
+      transition: all 0.3s ease;
     }
     .nav-logo {
       display: flex;
@@ -151,13 +202,14 @@
       text-decoration: none;
     }
     .nav-logo-icon {
-      width: 38px; height: 38px;
-      background: var(--accent);
-      border-radius: 8px;
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 12px rgba(85,139,47,0.3);
     }
     .nav-logo-text {
       display: flex; flex-direction: column;
@@ -247,7 +299,7 @@
       display: flex;
       align-items: center;
       overflow: hidden;
-      padding-top: 72px;
+      padding-top: 80px;
     }
 
     /* Textured background pattern */
@@ -256,8 +308,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(255,140,0,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(255,140,0,0.05) 0%, transparent 50%);
+        radial-gradient(ellipse 80% 60% at 75% 50%, rgba(85,139,47,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 15% 85%, rgba(255,140,0,0.1) 0%, transparent 50%);
     }
     .hero-grid-lines {
       position: absolute;
@@ -300,9 +352,9 @@
       gap: 10px;
     }
     .hero-tag-dot {
-      width: 8px; height: 8px;
+      width: 10px; height: 10px;
       border-radius: 50%;
-      background: var(--accent);
+      background: var(--green);
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
@@ -313,8 +365,8 @@
       font-size: 0.73rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 600;
+      color: var(--green);
+      font-weight: 700;
     }
     .hero h1 {
       font-family: 'Playfair Display', serif;
@@ -327,7 +379,7 @@
     }
     .hero h1 em {
       font-style: italic;
-      color: var(--accent);
+      color: var(--green);
     }
     .hero-desc {
       font-size: 1.05rem;
@@ -347,6 +399,8 @@
       margin-top: 60px;
       padding-top: 40px;
       border-top: 1px solid rgba(255,255,255,0.1);
+      position: relative;
+      z-index: 2;
     }
     .hero-stat-number {
       font-family: 'Playfair Display', serif;
@@ -362,6 +416,21 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.4);
+    }
+
+    .floating-leaf {
+      position: absolute;
+      font-size: 2.5rem;
+      opacity: 0.12;
+      z-index: 1;
+      animation: leafFloat 8s ease-in-out infinite;
+      pointer-events: none;
+      filter: blur(1px);
+    }
+    @keyframes leafFloat {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(30px, -40px) rotate(15deg); }
+      66% { transform: translate(-20px, 20px) rotate(-10deg); }
     }
 
     /* Avocado Illustration (CSS Art) */
@@ -380,65 +449,94 @@
     }
     .avo-scene {
       position: relative;
-      width: 320px;
-      height: 420px;
+      width: 340px;
+      height: 440px;
+      perspective: 1000px;
     }
     /* Main avocado shape */
     .avo-outer {
       position: absolute;
       top: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 220px;
-      height: 300px;
+      transform: translateX(-50%) rotateY(-5deg);
+      width: 230px;
+      height: 310px;
       background: linear-gradient(160deg, #2d5a1b 0%, #1a3d0d 40%, #0f2a06 100%);
       border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      box-shadow: inset -20px -30px 40px rgba(0,0,0,0.4), 0 20px 60px rgba(0,0,0,0.4);
-      animation: float 4s ease-in-out infinite;
+      box-shadow:
+        inset -10px -10px 30px rgba(0,0,0,0.5),
+        inset 10px 10px 30px rgba(255,255,255,0.1),
+        0 30px 60px rgba(0,0,0,0.4),
+        0 0 100px var(--green-10);
+      animation: float 5s ease-in-out infinite;
     }
     @keyframes float {
-      0%, 100% { transform: translateX(-50%) translateY(0px); }
-      50% { transform: translateX(-50%) translateY(-12px); }
+      0%, 100% { transform: translateX(-50%) translateY(0px) rotate(0deg); }
+      50% { transform: translateX(-50%) translateY(-20px) rotate(2deg); }
     }
     .avo-inner {
       position: absolute;
-      top: 30px;
+      top: 25px;
       left: 50%;
       transform: translateX(-50%);
-      width: 155px;
-      height: 220px;
-      background: linear-gradient(160deg, #c8e6a0 0%, #a8d080 30%, #8ec060 100%);
+      width: 170px;
+      height: 240px;
+      background: linear-gradient(160deg, #f0f9e0 0%, #d8efb0 30%, #a8d080 100%);
       border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      box-shadow: inset 0 0 15px rgba(85,139,47,0.2);
     }
     .avo-seed {
       position: absolute;
-      top: 70px;
+      bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
-      width: 80px;
-      height: 100px;
-      background: radial-gradient(ellipse, #a0622a 0%, #7a4520 50%, #5a3010 100%);
+      width: 90px;
+      height: 110px;
+      background: radial-gradient(circle at 30% 30%, #b87b45 0%, #7a4520 50%, #5a3010 100%);
       border-radius: 50%;
-      box-shadow: inset -8px -12px 20px rgba(0,0,0,0.3);
+      box-shadow:
+        inset -10px -15px 25px rgba(0,0,0,0.4),
+        5px 5px 15px rgba(0,0,0,0.2);
+    }
+    .avo-stem {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      width: 12px;
+      height: 25px;
+      background: #4a3010;
+      border-radius: 4px;
+      transform: translateX(-50%);
+    }
+    .avo-leaf {
+      position: absolute;
+      top: -20px;
+      left: 55%;
+      width: 30px;
+      height: 15px;
+      background: var(--green);
+      border-radius: 0 100% 0 100%;
+      transform: rotate(-15deg);
     }
     /* Half avocado */
     .avo-half {
       position: absolute;
-      bottom: 0; right: 0;
-      width: 160px;
-      height: 210px;
+      bottom: -20px; right: -30px;
+      width: 180px;
+      height: 240px;
       background: linear-gradient(160deg, #3d7a22 0%, #234d10 60%, #172f09 100%);
       border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+      box-shadow: 10px 10px 50px rgba(0,0,0,0.5);
       clip-path: inset(0 0 0 50%);
-      animation: float 4s ease-in-out infinite;
-      animation-delay: 0.5s;
+      animation: float 5s ease-in-out infinite;
+      animation-delay: 0.7s;
+      transform: rotate(15deg);
     }
     .avo-half-inner {
       position: absolute;
       bottom: 0; right: 0;
-      width: 112px;
-      height: 154px;
-      background: linear-gradient(160deg, #c8e6a0 0%, #a8d080 50%, #8ec060 100%);
+      width: 126px;
+      height: 175px;
+      background: linear-gradient(160deg, #f0f9e0 0%, #d8efb0 50%, #a8d080 100%);
       border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
       clip-path: inset(0 0 0 50%);
     }
@@ -459,13 +557,15 @@
     /* Floating badges */
     .hero-badge {
       position: absolute;
-      background: rgba(255,255,255,0.07);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: var(--radius-lg);
-      padding: 12px 18px;
+      padding: 16px 24px;
       white-space: nowrap;
       animation: float 4s ease-in-out infinite;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     }
     .hero-badge-1 { top: 60px; left: -40px; animation-delay: 1s; }
     .hero-badge-2 { bottom: 100px; right: -20px; animation-delay: 2s; }
@@ -488,11 +588,13 @@
        TICKER / MARQUEE
     ──────────────────────────────────────── */
     .ticker {
-      background: var(--accent);
-      color: var(--navy);
-      padding: 12px 0;
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 16px 0;
       overflow: hidden;
       position: relative;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     .ticker-track {
       display: flex;
@@ -510,7 +612,7 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
-    .ticker-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--navy); opacity: 0.4; }
+    .ticker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: 0.8; }
     @keyframes ticker {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -519,9 +621,9 @@
     /* ────────────────────────────────────────
        SECTION COMMONS
     ──────────────────────────────────────── */
-    section { padding: 100px 0; }
+    section { padding: 140px 0; position: relative; }
     @media (max-width: 768px) {
-      section { padding: 60px 0; }
+      section { padding: 80px 0; }
     }
     .section-label {
       font-size: 0.7rem;
@@ -671,12 +773,18 @@
       display: flex;
       gap: 18px;
       align-items: flex-start;
-      padding: 20px;
+      padding: 24px;
       border-radius: var(--radius-lg);
-      background: var(--light-gray);
-      transition: background 0.2s;
+      background: var(--soft-green);
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: 1px solid transparent;
     }
-    .about-feature:hover { background: var(--navy-10); }
+    .about-feature:hover {
+      background: var(--white);
+      transform: translateX(10px);
+      box-shadow: var(--shadow);
+      border-color: var(--green-10);
+    }
     .af-icon {
       width: 44px; height: 44px;
       border-radius: 10px;
@@ -696,17 +804,19 @@
     /* ────────────────────────────────────────
        PRODUCTS
     ──────────────────────────────────────── */
-    .products { background: var(--light-gray); }
+    .products { background: var(--soft-green); }
     .product-card {
       background: var(--white);
       border-radius: var(--radius-lg);
       overflow: hidden;
-      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s;
-      border: 1px solid var(--mid-gray);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: 1px solid rgba(15,33,67,0.05);
+      box-shadow: var(--shadow);
     }
     .product-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-12px);
       box-shadow: var(--shadow-lg);
+      border-color: var(--green-10);
     }
     .product-img {
       height: 200px;
@@ -744,12 +854,12 @@
       margin-bottom: 20px;
     }
     .product-spec {
-      background: var(--light-gray);
-      padding: 4px 12px;
+      background: var(--green-10);
+      padding: 6px 14px;
       border-radius: 100px;
       font-size: 0.72rem;
-      font-weight: 500;
-      color: var(--navy);
+      font-weight: 600;
+      color: var(--green-dark);
       letter-spacing: 0.04em;
     }
     .product-cta {
@@ -811,8 +921,10 @@
       padding: 32px 24px;
       border-radius: var(--radius-lg);
       border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.04);
-      transition: border-color 0.3s, background 0.3s, transform 0.3s;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     .why-card:hover {
       border-color: rgba(255,140,0,0.3);
@@ -851,7 +963,7 @@
     /* ────────────────────────────────────────
        PROCESS / TIMELINE
     ──────────────────────────────────────── */
-    .process { background: var(--white); }
+    .process { background: var(--soft-green); }
     .process-steps {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -865,8 +977,9 @@
       left: 10%;
       right: 10%;
       height: 2px;
-      background: linear-gradient(90deg, var(--navy), var(--accent));
+      background: linear-gradient(90deg, var(--green), var(--accent));
       z-index: 0;
+      opacity: 0.3;
     }
     @media (max-width: 991px) {
       .process-steps {
@@ -904,7 +1017,7 @@
       width: 72px; height: 72px;
       border-radius: 50%;
       background: var(--white);
-      border: 3px solid var(--mid-gray);
+      border: 3px solid var(--green-10);
       display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem;
       margin: 0 auto 24px;
@@ -937,7 +1050,7 @@
     /* ────────────────────────────────────────
        MARKETS (Export Destinations)
     ──────────────────────────────────────── */
-    .markets { background: var(--light-gray); }
+    .markets { background: var(--white); }
     .markets-grid {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -1008,7 +1121,7 @@
       background: rgba(15,33,67,0.12);
       border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
     }
-    .blob-africa { width: 22%; height: 35%; top: 30%; left: 42%; background: rgba(15,33,67,0.2); }
+    .blob-africa { width: 22%; height: 35%; top: 30%; left: 42%; background: rgba(85,139,47,0.2); }
     .blob-europe { width: 14%; height: 20%; top: 14%; left: 44%; border-radius: 60% 40% 40% 60%/60% 60% 40% 40%; background: rgba(15,33,67,0.12); }
     .blob-asia { width: 26%; height: 30%; top: 16%; left: 55%; border-radius: 40% 60% 50% 50%/50% 40% 60% 50%; background: rgba(15,33,67,0.12); }
     .blob-americas { width: 16%; height: 40%; top: 20%; left: 14%; border-radius: 50% 50% 40% 60%/40% 60% 50% 50%; background: rgba(15,33,67,0.12); }
@@ -1095,15 +1208,17 @@
       }
     }
     .testimonial-card {
-      padding: 32px;
+      padding: 40px 32px;
       border-radius: var(--radius-lg);
-      border: 1px solid var(--mid-gray);
+      border: 1px solid rgba(15,33,67,0.05);
       background: var(--white);
-      transition: box-shadow 0.3s, transform 0.3s;
+      transition: all 0.4s ease;
+      box-shadow: var(--shadow);
     }
     .testimonial-card:hover {
-      box-shadow: var(--shadow);
-      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+      border-color: var(--green-10);
     }
     .testimonial-card:first-child {
       border-color: var(--navy);
@@ -1137,8 +1252,8 @@
        CTA BANNER
     ──────────────────────────────────────── */
     .cta-banner {
-      background: var(--accent);
-      padding: 80px 0;
+      background: var(--green-dark);
+      padding: 100px 0;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -1157,29 +1272,30 @@
     }
     .cta-banner h2 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-size: clamp(2.4rem, 5vw, 4rem);
       font-weight: 900;
-      color: var(--navy);
+      color: var(--white);
       letter-spacing: -0.02em;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       position: relative;
     }
     .cta-banner p {
-      color: rgba(15,33,67,0.7);
-      font-size: 1.05rem;
-      margin-bottom: 40px;
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1rem;
+      margin-bottom: 48px;
       position: relative;
     }
     .cta-banner .btn-navy {
       position: relative;
       font-size: 0.95rem;
-      padding: 16px 36px;
+      padding: 18px 40px;
+      background: var(--accent);
     }
 
     /* ────────────────────────────────────────
        CONTACT SECTION
     ──────────────────────────────────────── */
-    .contact { background: var(--light-gray); }
+    .contact { background: var(--soft-green); }
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1.4fr;
@@ -1298,11 +1414,12 @@
       margin-bottom: 20px;
     }
     .footer-logo-icon {
-      width: 40px; height: 40px;
-      background: var(--accent);
-      border-radius: 8px;
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+      border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .footer-logo-name {
       font-family: 'Playfair Display', serif;
@@ -1384,6 +1501,35 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--green);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      background: var(--green-dark);
+      transform: translateY(-5px);
+    }
   </style>
 </head>
 <body>
@@ -1418,6 +1564,9 @@
   <!-- ╔═ HERO ═╗ -->
   <header class="hero">
     <div class="hero-grid-lines"></div>
+    <div class="floating-leaf" style="top: 20%; left: 5%; animation-delay: 0s;">🌿</div>
+    <div class="floating-leaf" style="bottom: 15%; left: 40%; animation-delay: 2s; font-size: 1.8rem;">🍃</div>
+    <div class="floating-leaf" style="top: 15%; right: 10%; animation-delay: 4s;">🌿</div>
     <div class="hero-content">
       <div class="hero-left animate">
         <div class="hero-tag">
@@ -1454,6 +1603,8 @@
         <div class="avo-ring avo-ring-3"></div>
         <div class="avo-scene">
           <div class="avo-outer">
+            <div class="avo-stem"></div>
+            <div class="avo-leaf"></div>
             <div class="avo-inner">
               <div class="avo-seed"></div>
             </div>
@@ -1500,6 +1651,7 @@
 
   <!-- ╔═ ABOUT ═╗ -->
   <section class="about" id="about">
+    <div class="blob" style="top: 10%; right: -10%; opacity: 0.3;"></div>
     <div class="container">
       <div class="grid-2">
         <div class="about-visual reveal">
@@ -1580,7 +1732,14 @@
 
   <!-- ╔═ PRODUCTS ═╗ -->
   <section class="products" id="products">
-    <div class="container">
+    <div class="section-divider divider-top">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px;">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="divider-white"></path>
+      </svg>
+    </div>
+    <div class="bg-grain"></div>
+    <div class="blob" style="bottom: 0; left: -10%; opacity: 0.4;"></div>
+    <div class="container" style="position:relative; z-index:2;">
       <div class="section-header centered reveal">
         <div class="section-label">Our Products</div>
         <h2 class="section-title">Premium Avocado Varieties</h2>
@@ -1590,7 +1749,7 @@
         <!-- Hass -->
         <div class="product-card">
           <div class="product-img product-img-hass">
-            <span class="tag tag-accent">Best Seller</span>
+            <span class="tag tag-green">Best Seller</span>
             <div class="product-avo-emoji" style="animation-delay:0s;">🥑</div>
           </div>
           <div class="product-body">
@@ -1630,7 +1789,7 @@
         <!-- Organic -->
         <div class="product-card">
           <div class="product-img product-img-organic">
-            <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">🌱 Organic</span>
+            <span class="tag tag-green">🌱 Organic</span>
             <div class="product-avo-emoji" style="animation-delay:1s;">🌿</div>
           </div>
           <div class="product-body">
@@ -1690,7 +1849,13 @@
 
   <!-- ╔═ PROCESS ═╗ -->
   <section class="process" id="process">
-    <div class="container">
+    <div class="section-divider divider-top">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px;">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="divider-navy"></path>
+      </svg>
+    </div>
+    <div class="bg-grain"></div>
+    <div class="container" style="position:relative; z-index:2;">
       <div class="section-header centered reveal">
         <div class="section-label">How It Works</div>
         <h2 class="section-title">From Farm to Your Market<br/>in 5 Steps</h2>
@@ -1742,7 +1907,8 @@
 
   <!-- ╔═ MARKETS ═╗ -->
   <section class="markets" id="markets">
-    <div class="container">
+    <div class="bg-grain"></div>
+    <div class="container" style="position:relative; z-index:2;">
       <div class="markets-grid">
         <div class="reveal">
           <div class="section-label">Export Destinations</div>
@@ -1832,6 +1998,7 @@
 
   <!-- ╔═ TESTIMONIALS ═╗ -->
   <section class="testimonials" id="testimonials">
+    <div class="blob" style="top: -20%; left: -10%; opacity: 0.2;"></div>
     <div class="container">
       <div class="section-header centered reveal">
         <div class="section-label">Client Stories</div>
@@ -1886,7 +2053,14 @@
 
   <!-- ╔═ CONTACT ═╗ -->
   <section class="contact" id="contact">
-    <div class="container">
+    <div class="section-divider divider-top">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px;">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="divider-white"></path>
+      </svg>
+    </div>
+    <div class="bg-grain"></div>
+    <div class="blob" style="top: 0; right: -5%; opacity: 0.3;"></div>
+    <div class="container" style="position:relative; z-index:2;">
       <div class="contact-grid">
         <div class="reveal">
           <div class="section-label">Get In Touch</div>
@@ -1976,6 +2150,7 @@
 
   <!-- ╔═ FOOTER ═╗ -->
   <footer>
+    <div class="blob" style="bottom: 0; right: 0; opacity: 0.1; width: 800px; height: 800px; background: radial-gradient(circle, var(--accent) 0%, transparent 70%);"></div>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -2033,7 +2208,19 @@
     </div>
   </footer>
 
+  <a href="#" class="back-to-top">↑</a>
+
   <script>
+    // Back to top visibility
+    const btt = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
+      }
+    });
+
     // Scroll-reveal
     const reveals = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
