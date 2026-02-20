@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fruitline Trading — Premium Tanzanian Produce: Avocados, Mangoes & More</title>
+  <title>Fruitline Trading — Premium Avocado Exports from Tanzania</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     /* ─── Design Tokens (60-30-10) ─── */
     :root {
       /* Base & Neutral */
       --white:       #FAFAF7;
-      --soft-green:  #E8F2E1; /* Base soft green */
-      --prominent-green: #D9E8D3; /* More prominent light green */
+      --soft-green:  #ECF2E8; /* 15% Target color */
       --light-gray:  #F0EEE9;
       --mid-gray:    #D8D5CE;
       --text-light:  #888480;
@@ -175,7 +174,6 @@
     .divider-top { top: -1px; transform: rotate(180deg); }
     .divider-bottom { bottom: -1px; }
     .divider-soft-green { fill: var(--soft-green); }
-    .divider-prominent-green { fill: var(--prominent-green); }
     .divider-white { fill: var(--white); }
     .divider-navy { fill: var(--navy); }
 
@@ -186,8 +184,8 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      padding: 0 5%;
-      background: rgba(15,33,67,0.92);
+      padding: 0 32px;
+      background: rgba(15,33,67,0.85);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -230,10 +228,6 @@
       text-transform: uppercase;
       color: rgba(255,255,255,0.45);
     }
-    @media (max-width: 580px) {
-      .nav-logo-sub { display: none; }
-      .nav-logo-name { font-size: 0.95rem; }
-    }
     .nav-links {
       display: flex;
       align-items: center;
@@ -271,23 +265,21 @@
     .mobile-only { display: none; }
 
     @media (max-width: 991px) {
-      nav { padding: 0 16px; }
-      .nav-logo { max-width: 75%; }
+      nav { padding: 0 20px; }
       .menu-toggle { display: flex; z-index: 1001; }
       .nav-links {
         position: fixed;
-        top: 0; right: 0;
-        width: 100%; max-width: 320px; height: 100vh;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
         background: var(--navy);
         flex-direction: column;
         justify-content: center;
         gap: 30px;
-        transform: translateX(100%);
-        transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+        transition: 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
         box-shadow: -10px 0 30px rgba(0,0,0,0.3);
         padding-left: 0;
       }
-      .nav-links.active { transform: translateX(0); }
+      .nav-links.active { right: 0; }
       .nav-links a { font-size: 1.2rem; }
       .nav-cta { display: none; }
       .mobile-only { display: block; }
@@ -358,7 +350,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      max-width: 100%;
     }
     .hero-tag-dot {
       width: 10px; height: 10px;
@@ -453,9 +444,6 @@
     @media (max-width: 991px) {
       .hero-visual { height: 400px; }
       .avo-scene { transform: scale(0.8); }
-    }
-    @media (max-width: 480px) {
-      .avo-scene { width: 260px; transform: scale(0.8); }
       .hero-badge-1 { left: 0; }
       .hero-badge-2 { right: 0; }
     }
@@ -464,9 +452,6 @@
       width: 340px;
       height: 440px;
       perspective: 1000px;
-    }
-    @media (max-width: 480px) {
-      .avo-scene { width: 280px; transform: scale(0.85); }
     }
     /* Main avocado shape */
     .avo-outer {
@@ -603,8 +588,8 @@
        TICKER / MARQUEE
     ──────────────────────────────────────── */
     .ticker {
-      background: var(--prominent-green);
-      color: var(--navy);
+      background: var(--green-dark);
+      color: var(--white);
       padding: 16px 0;
       overflow: hidden;
       position: relative;
@@ -627,7 +612,7 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
-    .ticker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); opacity: 0.8; }
+    .ticker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: 0.8; }
     @keyframes ticker {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -673,7 +658,7 @@
     /* ────────────────────────────────────────
        ABOUT / MISSION
     ──────────────────────────────────────── */
-    .about { background: var(--white); position: relative; overflow: hidden; }
+    .about { background: var(--white); }
     .about-visual {
       position: relative;
     }
@@ -819,7 +804,7 @@
     /* ────────────────────────────────────────
        PRODUCTS
     ──────────────────────────────────────── */
-    .products { background: var(--soft-green); position: relative; overflow: hidden; }
+    .products { background: var(--soft-green); }
     .product-card {
       background: var(--white);
       border-radius: var(--radius-lg);
@@ -899,22 +884,21 @@
        WHY CHOOSE US
     ──────────────────────────────────────── */
     .why {
-      background: var(--prominent-green);
+      background: var(--navy);
       position: relative;
       overflow: hidden;
-      padding: 120px 0;
     }
     .why::before {
       content: '';
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(var(--navy-10) 1px, transparent 1px),
-        linear-gradient(90deg, var(--navy-10) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
       background-size: 60px 60px;
     }
-    .why .section-title { color: var(--navy); }
-    .why .section-subtitle { color: var(--text-light); }
+    .why .section-title { color: var(--white); }
+    .why .section-subtitle { color: rgba(255,255,255,0.5); }
     .why .section-label { color: var(--accent); }
 
     .why-cards {
@@ -936,9 +920,10 @@
     .why-card {
       padding: 32px 24px;
       border-radius: var(--radius-lg);
-      border: 1px solid var(--navy-10);
-      background: var(--white);
-      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     .why-card:hover {
@@ -958,19 +943,19 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--white);
       margin-bottom: 10px;
     }
     .why-card p {
       font-size: 0.85rem;
-      color: var(--text-light);
+      color: rgba(255,255,255,0.45);
       line-height: 1.7;
     }
     .why-number {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
       font-weight: 900;
-      color: var(--navy-10);
+      color: rgba(255,140,0,0.15);
       line-height: 1;
       margin-bottom: 8px;
     }
@@ -978,7 +963,7 @@
     /* ────────────────────────────────────────
        PROCESS / TIMELINE
     ──────────────────────────────────────── */
-    .process { background: var(--white); position: relative; overflow: hidden; }
+    .process { background: var(--soft-green); }
     .process-steps {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -1065,7 +1050,7 @@
     /* ────────────────────────────────────────
        MARKETS (Export Destinations)
     ──────────────────────────────────────── */
-    .markets { background: var(--soft-green); position: relative; overflow: hidden; }
+    .markets { background: var(--white); }
     .markets-grid {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -1179,10 +1164,6 @@
       justify-content: center;
       gap: 60px;
       flex-wrap: wrap;
-    }
-    @media (max-width: 580px) {
-      .hero-actions { flex-direction: column; }
-      .hero-actions .btn { width: 100%; justify-content: center; }
     }
     @media (max-width: 768px) {
       .cert-track {
@@ -1314,7 +1295,7 @@
     /* ────────────────────────────────────────
        CONTACT SECTION
     ──────────────────────────────────────── */
-    .contact { background: var(--white); position: relative; overflow: hidden; }
+    .contact { background: var(--soft-green); }
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1.4fr;
@@ -1405,8 +1386,6 @@
       background: var(--navy);
       color: rgba(255,255,255,0.6);
       padding: 72px 0 32px;
-      position: relative;
-      overflow: hidden;
     }
     .footer-grid {
       display: grid;
@@ -1484,8 +1463,6 @@
       justify-content: space-between;
       font-size: 0.78rem;
       color: rgba(255,255,255,0.3);
-      flex-wrap: wrap;
-      gap: 20px;
     }
     @media (max-width: 768px) {
       .footer-bottom {
@@ -1560,7 +1537,7 @@
   <!-- ╔═ NAVBAR ═╗ -->
   <nav>
     <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">🍃</div>
+      <div class="nav-logo-icon">🥑</div>
       <div class="nav-logo-text">
         <span class="nav-logo-name">Fruitline Trading</span>
         <span class="nav-logo-sub">Dar es Salaam, Tanzania</span>
@@ -1594,12 +1571,12 @@
       <div class="hero-left animate">
         <div class="hero-tag">
           <div class="hero-tag-dot"></div>
-          <span class="hero-tag-text">Tanzania's Premier Produce Exporter</span>
+          <span class="hero-tag-text">Tanzania's Premier Avocado Exporter</span>
         </div>
-        <h1>Tanzania's<br/><em>Finest</em><br/>Harvests,<br/>Global Reach.</h1>
+        <h1>Tanzania's<br/><em>Finest</em><br/>Avocados,<br/>Global Reach.</h1>
         <p class="hero-desc">
-          Fruitline Trading connects the fertile lands of Tanzania to discerning buyers worldwide —
-          delivering premium Avocados, Mangoes, Coconuts, and Fresh Produce with unmatched quality and care.
+          Fruitline Trading connects the lush highlands of Tanzania to discerning buyers worldwide —
+          delivering premium Hass and Fuerte avocados with unmatched freshness, traceability, and care.
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Request a Quote →</a>
@@ -1653,29 +1630,28 @@
   <div class="ticker">
     <div class="ticker-track">
       <!-- duplicated for seamless loop -->
-      <span class="ticker-item">🥑 Avocados <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🥭 Mangoes <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🍍 Pineapples <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🥥 Coconuts <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🥦 Fresh Vegetables <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🌿 Fresh Herbs <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🥑 Hass Avocados <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🥑 Fuerte Avocados <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🌱 Certified Organic <span class="ticker-dot"></span></span>
+      <span class="ticker-item">✈️ Air & Sea Freight <span class="ticker-dot"></span></span>
       <span class="ticker-item">🇹🇿 Tanzania Origin <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🏆 GlobalG.A.P. Certified <span class="ticker-dot"></span></span>
       <span class="ticker-item">🌡️ Cold Chain Maintained <span class="ticker-dot"></span></span>
-      <!-- duplicated -->
-      <span class="ticker-item">🥑 Avocados <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🥭 Mangoes <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🍍 Pineapples <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🥥 Coconuts <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🥦 Fresh Vegetables <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🌿 Fresh Herbs <span class="ticker-dot"></span></span>
+      <span class="ticker-item">📦 Custom Packaging <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🥑 Hass Avocados <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🥑 Fuerte Avocados <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🌱 Certified Organic <span class="ticker-dot"></span></span>
+      <span class="ticker-item">✈️ Air & Sea Freight <span class="ticker-dot"></span></span>
       <span class="ticker-item">🇹🇿 Tanzania Origin <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🏆 GlobalG.A.P. Certified <span class="ticker-dot"></span></span>
       <span class="ticker-item">🌡️ Cold Chain Maintained <span class="ticker-dot"></span></span>
+      <span class="ticker-item">📦 Custom Packaging <span class="ticker-dot"></span></span>
     </div>
   </div>
 
   <!-- ╔═ ABOUT ═╗ -->
   <section class="about" id="about">
-    <div class="blob" style="top: 10%; right: -10%; opacity: 0.2; background: var(--green);"></div>
+    <div class="blob" style="top: 10%; right: -10%; opacity: 0.3;"></div>
     <div class="container">
       <div class="grid-2">
         <div class="about-visual reveal">
@@ -1721,10 +1697,10 @@
           <div class="section-label">Our Story</div>
           <h2 class="section-title">Rooted in Tanzania.<br/>Trusted Worldwide.</h2>
           <p style="color:var(--text-light); line-height:1.8; margin-bottom:16px;">
-            Founded in Dar es Salaam, Fruitline Trading was built on a simple promise: to share Tanzania's exceptional agricultural bounty with the world — without compromising on quality, ethics, or relationships.
+            Founded in Dar es Salaam, Fruitline Trading was built on a simple promise: to share Tanzania's exceptional avocados with the world — without compromising on quality, ethics, or relationships.
           </p>
           <p style="color:var(--text-light); line-height:1.8;">
-            We specialize in Avocados, Mangoes, Coconuts, Pineapples, and a wide array of Fresh Vegetables and Herbs. Our direct partnerships with farmers ensure fair prices and market-grade consistency.
+            We work directly with small and medium-scale farmers across the Arusha, Kilimanjaro, and Mbeya regions, ensuring fair prices for growers while delivering market-grade consistency to global buyers.
           </p>
           <div class="about-features">
             <div class="about-feature">
@@ -1766,8 +1742,8 @@
     <div class="container" style="position:relative; z-index:2;">
       <div class="section-header centered reveal">
         <div class="section-label">Our Products</div>
-        <h2 class="section-title">Premium Tanzanian Export Grade</h2>
-        <p class="section-subtitle">A diverse portfolio of high-quality produce, sourced from the most fertile regions of Tanzania, handled with precision.</p>
+        <h2 class="section-title">Premium Avocado Varieties</h2>
+        <p class="section-subtitle">Harvested at peak maturity from Tanzania's volcanic-soil highlands — available in bulk, pallet, and retail-ready formats.</p>
       </div>
       <div class="grid-3 reveal">
         <!-- Hass -->
@@ -1798,95 +1774,11 @@
           </div>
           <div class="product-body">
             <h3>Fuerte Avocado</h3>
-            <p>Smooth, pear-shaped with thin skin. Preferred in the UK and Gulf markets for its mild, buttery flavour.</p>
+            <p>Smooth, pear-shaped with thin, peelable skin. Preferred in the UK and Gulf markets for its mild, buttery flavour.</p>
             <div class="product-specs">
               <span class="product-spec">200–400g</span>
               <span class="product-spec">10–13% Oil</span>
               <span class="product-spec">May – Sep</span>
-            </div>
-            <div class="product-cta">
-              <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="#contact" class="product-cta-link">Spec Sheet <span>→</span></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mangoes -->
-        <div class="product-card">
-          <div class="product-img" style="background: linear-gradient(135deg, #FFD54F, #FF8F00);">
-            <span class="tag tag-green">Seasonal</span>
-            <div class="product-avo-emoji" style="animation-delay:1s;">🥭</div>
-          </div>
-          <div class="product-body">
-            <h3>Premium Mangoes</h3>
-            <p>Including Tommy Atkins, Keitt, and Kent varieties. Sweet, fiberless, and perfect for export markets.</p>
-            <div class="product-specs">
-              <span class="product-spec">Apple Mango</span>
-              <span class="product-spec">Keitt</span>
-              <span class="product-spec">Nov – Mar</span>
-            </div>
-            <div class="product-cta">
-              <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="#contact" class="product-cta-link">Spec Sheet <span>→</span></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pineapples -->
-        <div class="product-card">
-          <div class="product-img" style="background: linear-gradient(135deg, #FFEE58, #FBC02D);">
-            <span class="tag tag-navy">Sweet Grade</span>
-            <div class="product-avo-emoji" style="animation-delay:1.5s;">🍍</div>
-          </div>
-          <div class="product-body">
-            <h3>Fresh Pineapples</h3>
-            <p>High sugar content and aromatic flavor. Harvested from the coastal plains of Tanzania.</p>
-            <div class="product-specs">
-              <span class="product-spec">1.2kg – 2.5kg</span>
-              <span class="product-spec">MD2 Variety</span>
-              <span class="product-spec">Year Round</span>
-            </div>
-            <div class="product-cta">
-              <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="#contact" class="product-cta-link">Spec Sheet <span>→</span></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Coconuts -->
-        <div class="product-card">
-          <div class="product-img" style="background: linear-gradient(135deg, #BCAAA4, #5D4037);">
-            <span class="tag tag-green">Bulk Supply</span>
-            <div class="product-avo-emoji" style="animation-delay:2s;">🥥</div>
-          </div>
-          <div class="product-body">
-            <h3>Mature Coconuts</h3>
-            <p>Standardized sizes for processing and retail. Sourced from the coastal belt of Tanga and Dar es Salaam.</p>
-            <div class="product-specs">
-              <span class="product-spec">Semi-Husked</span>
-              <span class="product-spec">600g+</span>
-              <span class="product-spec">Year Round</span>
-            </div>
-            <div class="product-cta">
-              <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
-              <a href="#contact" class="product-cta-link">Spec Sheet <span>→</span></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Vegetables & Herbs -->
-        <div class="product-card">
-          <div class="product-img" style="background: linear-gradient(135deg, #81C784, #388E3C);">
-            <span class="tag tag-navy">Fresh Picked</span>
-            <div class="product-avo-emoji" style="animation-delay:2.5s;">🥦</div>
-          </div>
-          <div class="product-body">
-            <h3>Vegetables & Herbs</h3>
-            <p>Fine Beans, Chilies, Basil, Mint, and more. Export-standard packaging for maximum shelf life.</p>
-            <div class="product-specs">
-              <span class="product-spec">French Beans</span>
-              <span class="product-spec">Fresh Herbs</span>
-              <span class="product-spec">Daily Supply</span>
             </div>
             <div class="product-cta">
               <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
@@ -1920,11 +1812,6 @@
 
   <!-- ╔═ WHY CHOOSE US ═╗ -->
   <section class="why" id="why">
-    <div class="section-divider divider-top">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px;">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="divider-soft-green"></path>
-      </svg>
-    </div>
     <div class="container">
       <div class="section-header centered reveal">
         <div class="section-label" style="color:var(--accent);">Why Fruitline</div>
@@ -1964,7 +1851,7 @@
   <section class="process" id="process">
     <div class="section-divider divider-top">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px;">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="divider-prominent-green"></path>
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="divider-navy"></path>
       </svg>
     </div>
     <div class="bg-grain"></div>
@@ -2020,18 +1907,13 @@
 
   <!-- ╔═ MARKETS ═╗ -->
   <section class="markets" id="markets">
-    <div class="section-divider divider-top">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px;">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="divider-white"></path>
-      </svg>
-    </div>
     <div class="bg-grain"></div>
     <div class="container" style="position:relative; z-index:2;">
       <div class="markets-grid">
         <div class="reveal">
           <div class="section-label">Export Destinations</div>
           <h2 class="section-title">Delivering to<br/>12+ Countries</h2>
-          <p class="section-subtitle">Our produce reaches major import hubs in Europe, the Middle East, and Asia — with growing presence in North America.</p>
+          <p class="section-subtitle">Our avocados reach major import hubs in Europe, the Middle East, and Asia — with growing presence in North America.</p>
           <div class="market-list">
             <div class="market-item active">
               <span class="market-flag">🇳🇱</span>
@@ -2115,7 +1997,7 @@
   </div>
 
   <!-- ╔═ TESTIMONIALS ═╗ -->
-  <section class="testimonials" id="testimonials" style="overflow: hidden;">
+  <section class="testimonials" id="testimonials">
     <div class="blob" style="top: -20%; left: -10%; opacity: 0.2;"></div>
     <div class="container">
       <div class="section-header centered reveal">
@@ -2163,7 +2045,7 @@
   <!-- ╔═ CTA BANNER ═╗ -->
   <div class="cta-banner">
     <div class="container">
-      <h2>Ready to Source<br/>Tanzanian Produce?</h2>
+      <h2>Ready to Source<br/>Tanzanian Avocados?</h2>
       <p>Join 40+ buyers who trust Fruitline Trading for consistent quality and reliable supply.</p>
       <a href="#contact" class="btn btn-navy">Get Started — Request a Quote</a>
     </div>
@@ -2173,7 +2055,7 @@
   <section class="contact" id="contact">
     <div class="section-divider divider-top">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px;">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="divider-soft-green"></path>
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="divider-white"></path>
       </svg>
     </div>
     <div class="bg-grain"></div>
@@ -2242,14 +2124,12 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label>Product Interest</label>
+                <label>Variety Required</label>
                 <select>
-                  <option>Avocados (Hass/Fuerte)</option>
-                  <option>Mangoes / Pineapples</option>
-                  <option>Coconuts / Tropical Fruits</option>
-                  <option>Fresh Vegetables & Herbs</option>
-                  <option>Bulk Export Logistics</option>
-                  <option>Other / Mixed Inquiry</option>
+                  <option>Hass Avocado</option>
+                  <option>Fuerte Avocado</option>
+                  <option>Certified Organic</option>
+                  <option>Mixed / Undecided</option>
                 </select>
               </div>
               <div class="form-group">
@@ -2275,10 +2155,10 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-icon">🍃</div>
+            <div class="footer-logo-icon">🥑</div>
             <span class="footer-logo-name">Fruitline Trading</span>
           </div>
-          <p>Tanzania's trusted partner for premium fruit and vegetable exports. Connecting East African growers to global markets with integrity and care.</p>
+          <p>Tanzania's trusted partner for premium avocado exports. Connecting East African growers to global markets with integrity and care.</p>
           <div class="footer-socials">
             <a href="#" class="social-btn">𝕏</a>
             <a href="#" class="social-btn">in</a>
@@ -2289,9 +2169,9 @@
         <div class="footer-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="#">Premium Avocados</a></li>
-            <li><a href="#">Mangoes & Pineapples</a></li>
-            <li><a href="#">Vegetables & Herbs</a></li>
+            <li><a href="#">Hass Avocados</a></li>
+            <li><a href="#">Fuerte Avocados</a></li>
+            <li><a href="#">Certified Organic</a></li>
             <li><a href="#">Custom Packaging</a></li>
             <li><a href="#">Product Catalogue</a></li>
           </ul>
