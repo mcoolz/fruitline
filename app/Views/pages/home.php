@@ -38,7 +38,7 @@
         <div class="avo-ring avo-ring-1"></div>
         <div class="avo-ring avo-ring-2"></div>
         <div class="avo-ring avo-ring-3"></div>
-        <img src="<?= $asset('images/avocado_isolated.webp') ?>" alt="Premium Avocado" class="hero-main-img">
+        <img src="<?= $asset('images/hero-avocado.png') ?>" alt="Premium Avocado" class="hero-main-img">
         <!-- Floating info badges -->
         <div class="hero-badge hero-badge-1">
           <div class="badge-label">Origin</div>
@@ -82,7 +82,17 @@
       <div class="grid-2">
         <div class="about-visual reveal">
           <div class="about-img-frame">
-            <img src="<?= $asset('images/field_view.webp') ?>" alt="Fruitline Farms" class="about-img">
+            <img src="<?= $asset('images/prime-products-facility.jpg') ?>" alt="Fruitline Facility" class="about-img">
+          </div>
+          <div class="about-stats-card reveal delay-1">
+            <div class="asc-item">
+              <strong>100%</strong>
+              <span>Traceability</span>
+            </div>
+            <div class="asc-item">
+              <strong>50+</strong>
+              <span>Partner Farms</span>
+            </div>
           </div>
         </div>
         <div class="about-content reveal">
@@ -91,8 +101,63 @@
           <p style="color:var(--text-light); line-height:1.8; margin-bottom:24px;">
             Founded in Dar es Salaam, Fruitline Trading was built on a simple promise: to share Tanzania's exceptional agricultural bounty with the world — without compromising on quality, ethics, or relationships.
           </p>
-          <a href="<?= $url('about') ?>" class="btn btn-navy">Learn More About Us</a>
+          <p style="color:var(--text-light); line-height:1.8; margin-bottom:32px;">
+            We operate at the intersection of traditional Tanzanian farming wisdom and modern global export standards, ensuring every piece of fruit meets the highest international benchmarks.
+          </p>
+          <div class="about-features">
+            <div class="feature-mini">
+              <span class="fm-icon">🛡️</span>
+              <div>
+                <strong>Quality Guaranteed</strong>
+                <p>Multi-stage inspection process before every shipment.</p>
+              </div>
+            </div>
+            <div class="feature-mini">
+              <span class="fm-icon">🚚</span>
+              <div>
+                <strong>Reliable Logistics</strong>
+                <p>Full cold-chain management from farm to port.</p>
+              </div>
+            </div>
+          </div>
+          <a href="<?= $url('about') ?>" class="btn btn-navy" style="margin-top:20px;">Learn More About Us</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔═ PROCESS SUMMARY ═╗ -->
+  <section class="process-home" style="padding: 100px 0; background: var(--soft-green);">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <div class="section-label">How We Work</div>
+        <h2 class="section-title">Streamlined Export Process</h2>
+        <p class="section-subtitle">We manage the complexity of international trade so you don't have to.</p>
+      </div>
+      <div class="grid-4 reveal">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Sourcing</h3>
+          <p>Carefully selected harvests from our certified partner farms across Tanzania.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Processing</h3>
+          <p>Grading, cleaning, and packing at our Arusha facility to your exact specs.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Compliance</h3>
+          <p>Rigorous phytosanitary checks and documentation for smooth customs clearance.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>Logistics</h3>
+          <p>Temperature-controlled sea or air freight to your destination port.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:50px;" class="reveal">
+        <a href="<?= $url('process') ?>" class="btn btn-outline">See Full Process Details</a>
       </div>
     </div>
   </section>
@@ -114,7 +179,7 @@
         <!-- Hass -->
         <div class="product-card">
           <div class="product-img product-img-hass">
-            <img src="<?= $asset('images/avocado_sliced.webp') ?>" alt="Hass Avocado" class="product-real-img">
+            <img src="<?= $asset('images/avocado-quality-check.jpg') ?>" alt="Hass Avocado" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Hass Avocado</h3>
@@ -124,21 +189,21 @@
         <!-- Mangoes -->
         <div class="product-card">
           <div class="product-img" style="background: var(--light-gray);">
-            <img src="<?= $asset('images/mangoes_fresh_1.webp') ?>" alt="Premium Mangoes" class="product-real-img">
+            <img src="<?= $asset('images/fresh-mango-closeup.jpg') ?>" alt="Premium Mangoes" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Premium Mangoes</h3>
             <p>Sweet, fiberless, and perfect for international export markets.</p>
           </div>
         </div>
-        <!-- Coconuts -->
+        <!-- Pineapples -->
         <div class="product-card">
           <div class="product-img" style="background: var(--light-gray);">
-            <img src="<?= $asset('images/coconuts_fresh.webp') ?>" alt="Mature Coconuts" class="product-real-img">
+            <img src="<?= $asset('images/whole-pineapples.jpg') ?>" alt="Fresh Pineapples" class="product-real-img">
           </div>
           <div class="product-body">
-            <h3>Mature Coconuts</h3>
-            <p>Standardized sizes for processing and retail. Coastal origin.</p>
+            <h3>Fresh Pineapples</h3>
+            <p>High sugar content and aromatic flavor. Coastal Tanzanian origin.</p>
           </div>
         </div>
       </div>
@@ -147,6 +212,55 @@
       </div>
     </div>
   </section>
+
+  <!-- ╔═ GLOBAL REACH ═╗ -->
+  <section class="reach-home" style="padding: 100px 0; background: #fff; overflow: hidden;">
+    <div class="container">
+      <div class="grid-2 align-center">
+        <div class="reveal">
+          <div class="section-label">Global Reach</div>
+          <h2 class="section-title">Connecting Tanzania<br/>to the World</h2>
+          <p style="color:var(--text-light); margin-bottom:30px; line-height:1.7;">
+            Our strategic location in Dar es Salaam and Arusha allows us to efficiently serve major markets across three continents. We are proud to be a key link in the global food supply chain.
+          </p>
+          <ul class="reach-list" style="list-style:none; padding:0; margin-bottom:40px;">
+            <li style="margin-bottom:15px; display:flex; align-items:center; gap:12px;">
+              <span style="color:var(--accent); font-weight:bold;">✓</span>
+              <span><strong>Europe:</strong> Netherlands, UK, Germany, France</span>
+            </li>
+            <li style="margin-bottom:15px; display:flex; align-items:center; gap:12px;">
+              <span style="color:var(--accent); font-weight:bold;">✓</span>
+              <span><strong>Middle East:</strong> UAE (Dubai), Qatar, Saudi Arabia</span>
+            </li>
+            <li style="margin-bottom:15px; display:flex; align-items:center; gap:12px;">
+              <span style="color:var(--accent); font-weight:bold;">✓</span>
+              <span><strong>Asia:</strong> Singapore, Hong Kong, Malaysia</span>
+            </li>
+          </ul>
+          <a href="<?= $url('markets') ?>" class="btn btn-navy">View Market Details</a>
+        </div>
+        <div class="reveal">
+          <div class="map-visual-simple">
+             <img src="<?= $asset('images/warehouse-export-pallets.jpg') ?>" alt="Export Logistics" style="width:100%; border-radius:30px; box-shadow: 0 30px 60px rgba(0,0,0,0.1);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔═ CERTIFICATIONS BAR ═╗ -->
+  <div class="certs-bar" style="padding: 40px 0; background: var(--navy); color: white;">
+    <div class="container">
+      <div class="cert-flex" style="display:flex; justify-content: space-between; align-items:center; flex-wrap:wrap; gap:30px; opacity: 0.8;">
+         <span style="font-weight:600; text-transform:uppercase; letter-spacing:1px; font-size:0.8rem;">Our Standards:</span>
+         <span style="display:flex; align-items:center; gap:8px;">GLOBALG.A.P.</span>
+         <span style="display:flex; align-items:center; gap:8px;">HACCP</span>
+         <span style="display:flex; align-items:center; gap:8px;">EU ORGANIC</span>
+         <span style="display:flex; align-items:center; gap:8px;">ISO 22000</span>
+         <span style="display:flex; align-items:center; gap:8px;">PHYTOSANITARY</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ╔═ CTA BANNER ═╗ -->
   <div class="cta-banner">

@@ -90,7 +90,7 @@
         <div class="footer-col">
           <h5>Sister Company</h5>
           <ul>
-            <li><a href="https://primeproductinternational.co.ke" target="_blank" rel="noopener">Prime Products International Ltd (Kenya)</a></li>
+            <li><a href="https://primeroductinternational.co.ke" target="_blank" rel="noopener">Prime Products International Ltd (Kenya)</a></li>
           </ul>
         </div>
       </div>

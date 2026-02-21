@@ -89,5 +89,14 @@
           </div>
         </div>
       </div>
+
+      <div class="reveal" style="margin-top: 80px; text-align: center;">
+        <div class="about-visual" style="max-width: 900px; margin: 0 auto;">
+          <img src="<?= $asset('images/warehouse.webp') ?>" alt="Our Warehouse" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
+          <div style="margin-top: 20px;">
+            <p style="font-size: 0.9rem; color: var(--text-light);">Visit us at our Dar es Salaam headquarters or our processing facility in Arusha.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>

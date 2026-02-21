@@ -5,7 +5,7 @@
       <div class="grid-2">
         <div class="about-visual reveal">
           <div class="about-img-frame">
-            <img src="<?= $asset('images/field_view.webp') ?>" alt="Fruitline Farms" class="about-img">
+            <img src="<?= $asset('images/avocado-orchard-tree.jpg') ?>" alt="Fruitline Farms" class="about-img">
           </div>
           <div class="about-floating-card">
             <div class="afc-number">500<span>T</span></div>

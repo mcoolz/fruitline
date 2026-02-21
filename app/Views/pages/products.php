@@ -13,7 +13,7 @@
         <div class="product-card">
           <div class="product-img product-img-hass">
             <span class="tag tag-green">Best Seller</span>
-            <img src="<?= $asset('images/avocado_sliced.webp') ?>" alt="Hass Avocado" class="product-real-img">
+            <img src="<?= $asset('images/avocado-quality-check.jpg') ?>" alt="Hass Avocado" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Hass Avocado</h3>
@@ -33,7 +33,7 @@
         <div class="product-card">
           <div class="product-img product-img-fuerte">
             <span class="tag tag-navy">Available Now</span>
-            <img src="<?= $asset('images/avocado_basket.webp') ?>" alt="Fuerte Avocado" class="product-real-img">
+            <img src="<?= $asset('images/avocado-export-crates.jpg') ?>" alt="Fuerte Avocado" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Fuerte Avocado</h3>
@@ -54,7 +54,7 @@
         <div class="product-card">
           <div class="product-img" style="background: var(--light-gray);">
             <span class="tag tag-green">Seasonal</span>
-            <img src="<?= $asset('images/mangoes_fresh_1.webp') ?>" alt="Premium Mangoes" class="product-real-img">
+            <img src="<?= $asset('images/fresh-mango-closeup.jpg') ?>" alt="Premium Mangoes" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Premium Mangoes</h3>
@@ -75,7 +75,7 @@
         <div class="product-card">
           <div class="product-img" style="background: var(--soft-green);">
             <span class="tag tag-navy">Sweet Grade</span>
-            <img src="<?= $asset('images/avocado_orchard.webp') ?>" alt="Fresh Pineapples" class="product-real-img">
+            <img src="<?= $asset('images/whole-pineapples.jpg') ?>" alt="Fresh Pineapples" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Fresh Pineapples</h3>
@@ -96,7 +96,7 @@
         <div class="product-card">
           <div class="product-img" style="background: var(--light-gray);">
             <span class="tag tag-green">Bulk Supply</span>
-            <img src="<?= $asset('images/coconuts_fresh.webp') ?>" alt="Mature Coconuts" class="product-real-img">
+            <img src="<?= $asset('images/coconuts_fresh.webp') ?>" alt="Fresh Coconuts" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Mature Coconuts</h3>
@@ -117,7 +117,7 @@
         <div class="product-card">
           <div class="product-img" style="background: var(--prominent-green);">
             <span class="tag tag-navy">Fresh Picked</span>
-            <img src="<?= $asset('images/avocado_sorting.webp') ?>" alt="Vegetables & Herbs" class="product-real-img">
+            <img src="<?= $asset('images/fresh-herbs-packaging.jpg') ?>" alt="Vegetables & Herbs" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Vegetables & Herbs</h3>
@@ -137,7 +137,7 @@
         <div class="product-card">
           <div class="product-img product-img-organic">
             <span class="tag tag-green">🌱 Organic</span>
-            <img src="<?= $asset('images/avocado_isolated.webp') ?>" alt="Certified Organic" class="product-real-img" style="object-fit: contain; padding: 20px;">
+            <img src="<?= $asset('images/hero-avocado.png') ?>" alt="Certified Organic" class="product-real-img" style="object-fit: contain; padding: 20px;">
           </div>
           <div class="product-body">
             <h3>Certified Organic</h3>

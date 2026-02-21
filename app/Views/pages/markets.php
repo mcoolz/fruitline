@@ -53,6 +53,32 @@
     </div>
   </section>
 
+  <!-- ╔═ LOGISTICS ═╗ -->
+  <section class="logistics" style="padding: 100px 0; background: var(--white);">
+    <div class="container">
+      <div class="grid-2 reveal" style="align-items: center;">
+        <div class="about-visual">
+          <img src="<?= $asset('images/logistics-delivery-truck.jpg') ?>" alt="Logistics" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
+        </div>
+        <div>
+          <div class="section-label">Logistics</div>
+          <h2 class="section-title">Seamless Global Supply Chain</h2>
+          <p style="margin-bottom: 24px;">Our logistics network is built for speed and reliability. We leverage both sea and air freight to ensure your produce arrives in peak condition, regardless of the destination.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="padding: 20px; background: var(--soft-green); border-radius: 12px;">
+              <h4 style="color: var(--navy); margin-bottom: 8px;">Cold Chain</h4>
+              <p style="font-size: 0.85rem;">Continuous temperature monitoring from packhouse to port.</p>
+            </div>
+            <div style="padding: 20px; background: var(--soft-green); border-radius: 12px;">
+              <h4 style="color: var(--navy); margin-bottom: 8px;">Efficiency</h4>
+              <p style="font-size: 0.85rem;">Optimized routes and documentation handling for zero delays.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ╔═ CERTIFICATIONS ═╗ -->
   <div class="certifications reveal">
     <div class="container">
