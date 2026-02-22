@@ -19,6 +19,7 @@
       </div>
     </a>
     <ul class="nav-links">
+      <li class="mobile-only"><a href="<?= $url('/') ?>">Home</a></li>
       <li><a href="<?= $url('about') ?>">About</a></li>
       <li><a href="<?= $url('products') ?>">Products</a></li>
       <li><a href="<?= $url('markets') ?>">Markets</a></li>
