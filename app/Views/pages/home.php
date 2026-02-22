@@ -38,7 +38,7 @@
         <div class="avo-ring avo-ring-1"></div>
         <div class="avo-ring avo-ring-2"></div>
         <div class="avo-ring avo-ring-3"></div>
-        <img src="<?= $asset('images/hero-avocado.png') ?>" alt="Premium Avocado" class="hero-main-img">
+        <img src="<?= $asset('images/avocado-hass-featured-product.webp') ?>" alt="Premium Avocado" class="hero-main-img">
         <!-- Floating info badges -->
         <div class="hero-badge hero-badge-1">
           <div class="badge-label">Origin</div>
@@ -82,7 +82,7 @@
       <div class="grid-2">
         <div class="about-visual reveal">
           <div class="about-img-frame">
-            <img src="<?= $asset('images/prime-products-facility.jpg') ?>" alt="Fruitline Facility" class="about-img">
+            <img src="<?= $asset('images/packaging-in-facility.jpg') ?>" alt="Fruitline Facility" class="about-img">
           </div>
           <div class="about-stats-card reveal delay-1">
             <div class="asc-item">
@@ -179,7 +179,7 @@
         <!-- Hass -->
         <div class="product-card">
           <div class="product-img product-img-hass">
-            <img src="<?= $asset('images/avocado-quality-check.jpg') ?>" alt="Hass Avocado" class="product-real-img">
+            <img src="<?= $asset('images/avocado-hass-featured-product.webp') ?>" alt="Hass Avocado" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Hass Avocado</h3>
@@ -189,7 +189,7 @@
         <!-- Mangoes -->
         <div class="product-card">
           <div class="product-img" style="background: var(--light-gray);">
-            <img src="<?= $asset('images/fresh-mango-closeup.jpg') ?>" alt="Premium Mangoes" class="product-real-img">
+            <img src="<?= $asset('images/mangoes-packaged.jpg') ?>" alt="Premium Mangoes" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Premium Mangoes</h3>
@@ -199,7 +199,7 @@
         <!-- Pineapples -->
         <div class="product-card">
           <div class="product-img" style="background: var(--light-gray);">
-            <img src="<?= $asset('images/whole-pineapples.jpg') ?>" alt="Fresh Pineapples" class="product-real-img">
+            <img src="<?= $asset('images/pineapple-featured-product.png') ?>" alt="Fresh Pineapples" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Fresh Pineapples</h3>

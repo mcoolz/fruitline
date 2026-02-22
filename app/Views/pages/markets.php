@@ -58,7 +58,7 @@
     <div class="container">
       <div class="grid-2 reveal" style="align-items: center;">
         <div class="about-visual">
-          <img src="<?= $asset('images/logistics-delivery-truck.jpg') ?>" alt="Logistics" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
+          <img src="<?= $asset('images/logistics-delivery.jpg') ?>" alt="Logistics" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
         </div>
         <div>
           <div class="section-label">Logistics</div>

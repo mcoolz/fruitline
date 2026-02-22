@@ -13,7 +13,7 @@
         <div class="product-card">
           <div class="product-img product-img-hass">
             <span class="tag tag-green">Best Seller</span>
-            <img src="<?= $asset('images/avocado-quality-check.jpg') ?>" alt="Hass Avocado" class="product-real-img">
+            <img src="<?= $asset('images/avocado-hass-featured-product.webp') ?>" alt="Hass Avocado" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Hass Avocado</h3>
@@ -33,7 +33,7 @@
         <div class="product-card">
           <div class="product-img product-img-fuerte">
             <span class="tag tag-navy">Available Now</span>
-            <img src="<?= $asset('images/avocado-export-crates.jpg') ?>" alt="Fuerte Avocado" class="product-real-img">
+            <img src="<?= $asset('images/avocado-fuerte-featured-product.webp') ?>" alt="Fuerte Avocado" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Fuerte Avocado</h3>
@@ -54,7 +54,7 @@
         <div class="product-card">
           <div class="product-img" style="background: var(--light-gray);">
             <span class="tag tag-green">Seasonal</span>
-            <img src="<?= $asset('images/fresh-mango-closeup.jpg') ?>" alt="Premium Mangoes" class="product-real-img">
+            <img src="<?= $asset('images/mangoes-packaged.jpg') ?>" alt="Premium Mangoes" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Premium Mangoes</h3>
@@ -75,7 +75,7 @@
         <div class="product-card">
           <div class="product-img" style="background: var(--soft-green);">
             <span class="tag tag-navy">Sweet Grade</span>
-            <img src="<?= $asset('images/whole-pineapples.jpg') ?>" alt="Fresh Pineapples" class="product-real-img">
+            <img src="<?= $asset('images/pineapple-featured-product.png') ?>" alt="Fresh Pineapples" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Fresh Pineapples</h3>
@@ -96,7 +96,7 @@
         <div class="product-card">
           <div class="product-img" style="background: var(--light-gray);">
             <span class="tag tag-green">Bulk Supply</span>
-            <img src="<?= $asset('images/coconuts_fresh.webp') ?>" alt="Fresh Coconuts" class="product-real-img">
+            <img src="<?= $asset('images/coconut-featured-product.png') ?>" alt="Fresh Coconuts" class="product-real-img">
           </div>
           <div class="product-body">
             <h3>Mature Coconuts</h3>
@@ -113,19 +113,18 @@
           </div>
         </div>
 
-        <!-- Vegetables & Herbs -->
+        <!-- French Beans -->
         <div class="product-card">
           <div class="product-img" style="background: var(--prominent-green);">
-            <span class="tag tag-navy">Fresh Picked</span>
-            <img src="<?= $asset('images/fresh-herbs-packaging.jpg') ?>" alt="Vegetables & Herbs" class="product-real-img">
+            <img src="<?= $asset('images/french-beans-featured-product.webp') ?>" alt="Fine French Beans" class="product-real-img">
           </div>
           <div class="product-body">
-            <h3>Vegetables & Herbs</h3>
-            <p>Fine Beans, Chilies, Basil, Mint, and more. Export-standard packaging for maximum shelf life.</p>
+            <h3>Fine French Beans</h3>
+            <p>Tender, hand-picked beans, graded for uniformity and packed in ventilated cartons for maximum freshness.</p>
             <div class="product-specs">
-              <span class="product-spec">French Beans</span>
-              <span class="product-spec">Fresh Herbs</span>
-              <span class="product-spec">Daily Supply</span>
+              <span class="product-spec">Extra Fine</span>
+              <span class="product-spec">80–120mm</span>
+              <span class="product-spec">Year Round</span>
             </div>
             <div class="product-cta">
               <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
@@ -133,11 +132,118 @@
             </div>
           </div>
         </div>
+
+        <!-- Snow Peas -->
+        <div class="product-card">
+          <div class="product-img" style="background: var(--soft-green);">
+            <img src="<?= $asset('images/snow-peas-featured-product.webp') ?>" alt="Fresh Snow Peas" class="product-real-img">
+          </div>
+          <div class="product-body">
+            <h3>Fresh Snow Peas</h3>
+            <p>Sweet, crunchy pods sourced from the highland regions. High in vitamins and perfect for retail stir-fry packs.</p>
+            <div class="product-specs">
+              <span class="product-spec">Grade A</span>
+              <span class="product-spec">50–90mm</span>
+              <span class="product-spec">Year Round</span>
+            </div>
+            <div class="product-cta">
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sugar Snaps -->
+        <div class="product-card">
+          <div class="product-img" style="background: var(--light-gray);">
+            <img src="<?= $asset('images/sugar-snaps-featured.webp') ?>" alt="Premium Sugar Snaps" class="product-real-img">
+          </div>
+          <div class="product-body">
+            <h3>Premium Sugar Snaps</h3>
+            <p>Fleshy, edible pods with a sweet flavor profile. Maintained under strict cold chain from harvest to delivery.</p>
+            <div class="product-specs">
+              <span class="product-spec">Crisp Grade</span>
+              <span class="product-spec">Pack: 250g/500g</span>
+              <span class="product-spec">Year Round</span>
+            </div>
+            <div class="product-cta">
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tenderstem Broccoli -->
+        <div class="product-card">
+          <div class="product-img" style="background: var(--prominent-green);">
+            <img src="<?= $asset('images/tenderstem-broccoli-featured-product.webp') ?>" alt="Tenderstem Broccoli" class="product-real-img">
+          </div>
+          <div class="product-body">
+            <h3>Tenderstem Broccoli</h3>
+            <p>A specialty brassica with long, succulent stems. Hand-harvested and quickly pre-cooled to preserve quality.</p>
+            <div class="product-specs">
+              <span class="product-spec">Long Stem</span>
+              <span class="product-spec">Pre-cooled</span>
+              <span class="product-spec">Year Round</span>
+            </div>
+            <div class="product-cta">
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Habanero Chillies -->
+        <div class="product-card">
+          <div class="product-img" style="background: var(--light-gray);">
+            <div style="position:relative; width:100%; height:100%;">
+                <img src="<?= $asset('images/red-habanero-featured-product.webp') ?>" alt="Red Habanero" class="product-real-img" style="width:50%; left:0; position:absolute;">
+                <img src="<?= $asset('images/yellow-habanero-new-featured-product.webp') ?>" alt="Yellow Habanero" class="product-real-img" style="width:50%; right:0; position:absolute;">
+            </div>
+          </div>
+          <div class="product-body">
+            <h3>Habanero Peppers</h3>
+            <p>Extremely hot and aromatic. Available in vibrant Red and Yellow varieties, ideal for sauces and spice processing.</p>
+            <div class="product-specs">
+              <span class="product-spec">Red & Yellow</span>
+              <span class="product-spec">100k-350k SHU</span>
+              <span class="product-spec">Year Round</span>
+            </div>
+            <div class="product-cta">
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bird Eye Chillies -->
+        <div class="product-card">
+          <div class="product-img" style="background: var(--soft-green);">
+            <div style="position:relative; width:100%; height:100%;">
+                <img src="<?= $asset('images/red-bird-eye-chilli-featured-product.webp') ?>" alt="Red Bird Eye Chilli" class="product-real-img" style="width:50%; left:0; position:absolute;">
+                <img src="<?= $asset('images/green-bird-eye-chillie-featured-product.webp') ?>" alt="Green Bird Eye Chilli" class="product-real-img" style="width:50%; right:0; position:absolute;">
+            </div>
+          </div>
+          <div class="product-body">
+            <h3>Bird Eye Chillies</h3>
+            <p>Small but potent chillies available in both Green and Red. Sourced from dedicated out-grower schemes.</p>
+            <div class="product-specs">
+              <span class="product-spec">Red & Green</span>
+              <span class="product-spec">50k-100k SHU</span>
+              <span class="product-spec">Year Round</span>
+            </div>
+            <div class="product-cta">
+              <a href="<?= $url('contact') ?>" class="btn btn-primary" style="padding:10px 20px;font-size:0.8rem;">Get Quote</a>
+              <a href="<?= $url('contact') ?>" class="product-cta-link">Spec Sheet <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
         <!-- Organic -->
         <div class="product-card">
           <div class="product-img product-img-organic">
             <span class="tag tag-green">🌱 Organic</span>
-            <img src="<?= $asset('images/hero-avocado.png') ?>" alt="Certified Organic" class="product-real-img" style="object-fit: contain; padding: 20px;">
+            <img src="<?= $asset('images/avocado_huerte_closeup.webp') ?>" alt="Certified Organic" class="product-real-img" style="object-fit: contain; padding: 20px;">
           </div>
           <div class="product-body">
             <h3>Certified Organic</h3>
