@@ -8,9 +8,9 @@
       <div class="hero-left animate">
         <div class="hero-tag">
           <div class="hero-tag-dot"></div>
-          <span class="hero-tag-text">Tanzania's Premier Produce Exporter</span>
+          <span class="hero-tag-text">Premier Produce Exporter</span>
         </div>
-        <h1>Tanzania's<br/><em>Finest</em><br/>Harvests,<br/>Global Reach.</h1>
+        <h1>Premium<br/><em>Finest</em><br/>Harvests,<br/>Global Reach.</h1>
         <p class="hero-desc">
           Fruitline Trading connects the fertile lands of Tanzania to discerning buyers worldwide —
           delivering premium Avocados, Mangoes, Coconuts, and Fresh Produce with unmatched quality and care.
@@ -46,7 +46,7 @@
         </div>
         <div class="hero-badge hero-badge-2">
           <div class="badge-label">Next Harvest</div>
-          <div class="badge-value"><span class="badge-accent">Apr–Aug</span> 2025</div>
+          <div class="badge-value"><span class="badge-accent">Apr–Aug</span> 2026</div>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
       <span class="ticker-item">🥥 Coconuts <span class="ticker-dot"></span></span>
       <span class="ticker-item">🥦 Fresh Vegetables <span class="ticker-dot"></span></span>
       <span class="ticker-item">🌿 Fresh Herbs <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🇹🇿 Tanzania Origin <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🌍 African Origin <span class="ticker-dot"></span></span>
       <span class="ticker-item">🌡️ Cold Chain Maintained <span class="ticker-dot"></span></span>
       <!-- duplicated -->
       <span class="ticker-item">🥑 Avocados <span class="ticker-dot"></span></span>
@@ -71,7 +71,7 @@
       <span class="ticker-item">🥥 Coconuts <span class="ticker-dot"></span></span>
       <span class="ticker-item">🥦 Fresh Vegetables <span class="ticker-dot"></span></span>
       <span class="ticker-item">🌿 Fresh Herbs <span class="ticker-dot"></span></span>
-      <span class="ticker-item">🇹🇿 Tanzania Origin <span class="ticker-dot"></span></span>
+      <span class="ticker-item">🌍 African Origin <span class="ticker-dot"></span></span>
       <span class="ticker-item">🌡️ Cold Chain Maintained <span class="ticker-dot"></span></span>
     </div>
   </div>
@@ -97,7 +97,7 @@
         </div>
         <div class="about-content reveal">
           <div class="section-label">Our Story</div>
-          <h2 class="section-title">Rooted in Tanzania.<br/>Trusted Worldwide.</h2>
+          <h2 class="section-title">Rooted in Quality.<br/>Trusted Worldwide.</h2>
           <p style="color:var(--text-light); line-height:1.8; margin-bottom:24px;">
             Founded in Dar es Salaam, Fruitline Trading was built on a simple promise: to share Tanzania's exceptional agricultural bounty with the world — without compromising on quality, ethics, or relationships.
           </p>
@@ -183,7 +183,7 @@
           </div>
           <div class="product-body">
             <h3>Hass Avocado</h3>
-            <p>Tanzania's most exported variety — rich, creamy flesh with long shelf life.</p>
+            <p>Our most exported variety — rich, creamy flesh with long shelf life.</p>
           </div>
         </div>
         <!-- Mangoes -->
@@ -203,7 +203,7 @@
           </div>
           <div class="product-body">
             <h3>Fresh Pineapples</h3>
-            <p>High sugar content and aromatic flavor. Coastal Tanzanian origin.</p>
+            <p>High sugar content and aromatic flavor. Sourced from coastal plains.</p>
           </div>
         </div>
       </div>
@@ -219,7 +219,7 @@
       <div class="grid-2 align-center">
         <div class="reveal">
           <div class="section-label">Global Reach</div>
-          <h2 class="section-title">Connecting Tanzania<br/>to the World</h2>
+          <h2 class="section-title">Connecting East Africa<br/>to the World</h2>
           <p style="color:var(--text-light); margin-bottom:30px; line-height:1.7;">
             Our strategic location in Dar es Salaam and Arusha allows us to efficiently serve major markets across three continents. We are proud to be a key link in the global food supply chain.
           </p>
@@ -265,7 +265,7 @@
   <!-- ╔═ CTA BANNER ═╗ -->
   <div class="cta-banner">
     <div class="container">
-      <h2>Ready to Source<br/>Tanzanian Produce?</h2>
+      <h2>Ready to Source<br/>Premium Produce?</h2>
       <p>Join 40+ buyers who trust Fruitline Trading for consistent quality and reliable supply.</p>
       <a href="<?= $url('contact') ?>" class="btn btn-forest">Get Started — Request a Quote</a>
     </div>

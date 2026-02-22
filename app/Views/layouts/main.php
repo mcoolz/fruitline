@@ -49,13 +49,7 @@
             <div class="footer-logo-icon">🍃</div>
             <span class="footer-logo-name">Fruitline Trading</span>
           </div>
-          <p>Tanzania's trusted partner for premium fruit and vegetable exports. Connecting East African growers to global markets with integrity and care.</p>
-          <div class="footer-socials">
-            <a href="#" class="social-btn">𝕏</a>
-            <a href="#" class="social-btn">in</a>
-            <a href="#" class="social-btn">f</a>
-            <a href="#" class="social-btn">✉</a>
-          </div>
+          <p>Your trusted partner for premium fruit and vegetable exports. Connecting East African growers to global markets with integrity and care.</p>
         </div>
         <div class="footer-col">
           <h5>Products</h5>
@@ -63,44 +57,30 @@
             <li><a href="<?= $url('products') ?>">Premium Avocados</a></li>
             <li><a href="<?= $url('products') ?>">Mangoes & Pineapples</a></li>
             <li><a href="<?= $url('products') ?>">Vegetables & Herbs</a></li>
-            <li><a href="#">Custom Packaging</a></li>
-            <li><a href="#">Product Catalogue</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
             <li><a href="<?= $url('about') ?>">About Us</a></li>
-            <li><a href="#">Our Farms</a></li>
-            <li><a href="#">Certifications</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Careers</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Trade Info</h5>
           <ul>
             <li><a href="<?= $url('markets') ?>">Export Markets</a></li>
-            <li><a href="#">Incoterms & Pricing</a></li>
-            <li><a href="#">Logistics Partners</a></li>
-            <li><a href="#">Quality Standards</a></li>
             <li><a href="<?= $url('contact') ?>">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Sister Company</h5>
           <ul>
-            <li><a href="https://primeroductinternational.co.ke" target="_blank" rel="noopener">Prime Products International Ltd (Kenya)</a></li>
+            <li><a href="https://primeproductinternational.co.ke" target="_blank" rel="noopener">Prime Products International Ltd (Kenya)</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Fruitline Trading Ltd. All rights reserved. Dar es Salaam, Tanzania.</span>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Cookie Policy</a>
-        </div>
+        <span>© 2026 Fruitline Trading Ltd. All rights reserved. Dar es Salaam, Tanzania.</span>
       </div>
     </div>
   </footer>
