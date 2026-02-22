@@ -66,11 +66,11 @@
           <p style="margin-bottom: 24px;">Our logistics network is built for speed and reliability. We leverage both sea and air freight to ensure your produce arrives in peak condition, regardless of the destination.</p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div style="padding: 20px; background: var(--soft-green); border-radius: 12px;">
-              <h4 style="color: var(--navy); margin-bottom: 8px;">Cold Chain</h4>
+              <h4 style="color: var(--forest); margin-bottom: 8px;">Cold Chain</h4>
               <p style="font-size: 0.85rem;">Continuous temperature monitoring from packhouse to port.</p>
             </div>
             <div style="padding: 20px; background: var(--soft-green); border-radius: 12px;">
-              <h4 style="color: var(--navy); margin-bottom: 8px;">Efficiency</h4>
+              <h4 style="color: var(--forest); margin-bottom: 8px;">Efficiency</h4>
               <p style="font-size: 0.85rem;">Optimized routes and documentation handling for zero delays.</p>
             </div>
           </div>

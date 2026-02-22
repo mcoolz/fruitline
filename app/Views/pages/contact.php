@@ -39,7 +39,7 @@
         </div>
         <div class="reveal">
           <div class="contact-form">
-            <h3 style="font-family:'Playfair Display',serif;color:var(--navy);font-size:1.5rem;margin-bottom:28px;font-weight:700;">Request a Quote</h3>
+            <h3 style="font-family:'Playfair Display',serif;color:var(--forest);font-size:1.5rem;margin-bottom:28px;font-weight:700;">Request a Quote</h3>
             <div class="form-row">
               <div class="form-group">
                 <label>First Name</label>
