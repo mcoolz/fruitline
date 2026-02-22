@@ -32,7 +32,7 @@
         <!-- Fuerte -->
         <div class="product-card">
           <div class="product-img product-img-fuerte">
-            <span class="tag tag-navy">Available Now</span>
+            <span class="tag tag-forest">Available Now</span>
             <img src="<?= $asset('images/avocado-fuerte-featured-product.webp') ?>" alt="Fuerte Avocado" class="product-real-img">
           </div>
           <div class="product-body">
@@ -74,7 +74,7 @@
         <!-- Pineapples -->
         <div class="product-card">
           <div class="product-img" style="background: var(--soft-green);">
-            <span class="tag tag-navy">Sweet Grade</span>
+            <span class="tag tag-forest">Sweet Grade</span>
             <img src="<?= $asset('images/pineapple-featured-product.png') ?>" alt="Fresh Pineapples" class="product-real-img">
           </div>
           <div class="product-body">

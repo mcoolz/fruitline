@@ -120,7 +120,7 @@
               </div>
             </div>
           </div>
-          <a href="<?= $url('about') ?>" class="btn btn-navy" style="margin-top:20px;">Learn More About Us</a>
+          <a href="<?= $url('about') ?>" class="btn btn-forest" style="margin-top:20px;">Learn More About Us</a>
         </div>
       </div>
     </div>
@@ -237,7 +237,7 @@
               <span><strong>Asia:</strong> Singapore, Hong Kong, Malaysia</span>
             </li>
           </ul>
-          <a href="<?= $url('markets') ?>" class="btn btn-navy">View Market Details</a>
+          <a href="<?= $url('markets') ?>" class="btn btn-forest">View Market Details</a>
         </div>
         <div class="reveal">
           <div class="map-visual-simple">
@@ -249,7 +249,7 @@
   </section>
 
   <!-- ╔═ CERTIFICATIONS BAR ═╗ -->
-  <div class="certs-bar" style="padding: 40px 0; background: var(--navy); color: white;">
+  <div class="certs-bar" style="padding: 40px 0; background: var(--forest); color: white;">
     <div class="container">
       <div class="cert-flex" style="display:flex; justify-content: space-between; align-items:center; flex-wrap:wrap; gap:30px; opacity: 0.8;">
          <span style="font-weight:600; text-transform:uppercase; letter-spacing:1px; font-size:0.8rem;">Our Standards:</span>
@@ -267,6 +267,6 @@
     <div class="container">
       <h2>Ready to Source<br/>Tanzanian Produce?</h2>
       <p>Join 40+ buyers who trust Fruitline Trading for consistent quality and reliable supply.</p>
-      <a href="<?= $url('contact') ?>" class="btn btn-navy">Get Started — Request a Quote</a>
+      <a href="<?= $url('contact') ?>" class="btn btn-forest">Get Started — Request a Quote</a>
     </div>
   </div>
