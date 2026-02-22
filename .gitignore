@@ -1,0 +1,11 @@
+node_modules/
+*.log
+*.png
+*.jpg
+!assets/images/*.jpg
+!assets/images/*.png
+verify_screenshots.js
+ls_output.txt
+find_unused_images.py
+playwright-report/
+test-results/
