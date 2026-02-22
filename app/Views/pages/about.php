@@ -22,7 +22,7 @@
 
         <div class="about-content reveal">
           <div class="section-label">Our Story</div>
-          <h2 class="section-title">Rooted in Tanzania.<br/>Trusted Worldwide.</h2>
+          <h2 class="section-title">Rooted in Quality.<br/>Trusted Worldwide.</h2>
           <p style="color:var(--text-light); line-height:1.8; margin-bottom:16px;">
             Founded in Dar es Salaam, Fruitline Trading was built on a simple promise: to share Tanzania's exceptional agricultural bounty with the world — without compromising on quality, ethics, or relationships.
           </p>

@@ -7,7 +7,7 @@ use App\Core\Controller;
 class PageController extends Controller {
     public function index() {
         $this->render('home', [
-            'title' => 'Fruitline Trading — Premium Tanzanian Produce'
+            'title' => 'Fruitline Trading — Premium Produce'
         ]);
     }
 

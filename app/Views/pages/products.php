@@ -5,8 +5,8 @@
     <div class="container" style="position:relative; z-index:2;">
       <div class="section-header centered reveal">
         <div class="section-label">Our Products</div>
-        <h2 class="section-title">Premium Tanzanian Export Grade</h2>
-        <p class="section-subtitle">A diverse portfolio of high-quality produce, sourced from the most fertile regions of Tanzania, handled with precision.</p>
+        <h2 class="section-title">Premium Export Grade</h2>
+        <p class="section-subtitle">A diverse portfolio of high-quality produce, sourced from the most fertile regions, handled with precision.</p>
       </div>
       <div class="grid-3 reveal">
         <!-- Hass -->
@@ -17,7 +17,7 @@
           </div>
           <div class="product-body">
             <h3>Hass Avocado</h3>
-            <p>Tanzania's most exported variety — rich, creamy flesh with long shelf life. Ideal for European and Asian markets.</p>
+            <p>Our most exported variety — rich, creamy flesh with long shelf life. Ideal for European and Asian markets.</p>
             <div class="product-specs">
               <span class="product-spec">120–250g</span>
               <span class="product-spec">12–15% Oil</span>
@@ -79,7 +79,7 @@
           </div>
           <div class="product-body">
             <h3>Fresh Pineapples</h3>
-            <p>High sugar content and aromatic flavor. Harvested from the coastal plains of Tanzania.</p>
+            <p>High sugar content and aromatic flavor. Sourced from fertile coastal plains.</p>
             <div class="product-specs">
               <span class="product-spec">1.2kg – 2.5kg</span>
               <span class="product-spec">MD2 Variety</span>
